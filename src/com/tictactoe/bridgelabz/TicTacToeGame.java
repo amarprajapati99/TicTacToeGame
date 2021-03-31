@@ -26,32 +26,33 @@ public class TicTacToeGame {
 		printGameBoard(gameBoard);
 
 	}
-/**
- * we are checking  to empty space and perform valid moove
- * what position are empty. 
- */
-	private static boolean isValidMove (char[][] board, String position) {
-		switch(position) {
-			case "1":
-				return (board[0][0] == ' ');
-			case "2":
-				return (board[0][1] == ' ');
-			case "3":
-				return (board[0][2] == ' ');
-			case "4":
-				return (board[1][0] == ' ');
-			case "5":
-				return (board[1][1] == ' ');
-			case "6":
-				return (board[1][2] == ' ');
-			case "7":
-				return (board[2][0] == ' ');
-			case "8":
-				return (board[2][1] == ' ');
-			case "9":
-				return (board[2][2] == ' ');
-			default:
-				return false;
+
+	/**
+	 * we are checking to empty space and perform valid moove what position are
+	 * empty.
+	 */
+	private static boolean isValidMove(char[][] board, String position) {
+		switch (position) {
+		case "1":
+			return (board[0][0] == ' ');
+		case "2":
+			return (board[0][1] == ' ');
+		case "3":
+			return (board[0][2] == ' ');
+		case "4":
+			return (board[1][0] == ' ');
+		case "5":
+			return (board[1][1] == ' ');
+		case "6":
+			return (board[1][2] == ' ');
+		case "7":
+			return (board[2][0] == ' ');
+		case "8":
+			return (board[2][1] == ' ');
+		case "9":
+			return (board[2][2] == ' ');
+		default:
+			return false;
 		}
 	}
 
@@ -87,6 +88,40 @@ public class TicTacToeGame {
 			break;
 		case "9":
 			gameBoard[2][2] = 'X';
+			break;
+		default:
+			System.out.println(":(");
+		}
+	}
+
+	private static void placeMove(char[][] board, String position, char index) {
+		switch (position) {
+		case "1":
+			board[0][0] = index;
+			break;
+		case "2":
+			board[0][1] = index;
+			break;
+		case "3":
+			board[0][2] = index;
+			break;
+		case "4":
+			board[1][0] = index;
+			break;
+		case "5":
+			board[1][1] = index;
+			break;
+		case "6":
+			board[1][2] = index;
+			break;
+		case "7":
+			board[2][0] = index;
+			break;
+		case "8":
+			board[2][1] = index;
+			break;
+		case "9":
+			board[2][2] = index;
 			break;
 		default:
 			System.out.println(":(");
